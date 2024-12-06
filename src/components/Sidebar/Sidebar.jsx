@@ -68,7 +68,7 @@ function Sidebar(){
         <div className="part3">
 
              <div className="sub">SUBSCRIPTION</div>
-             {/* map  */}
+            
         {
                     part3.map((i)=>
                         <div className="navigation">

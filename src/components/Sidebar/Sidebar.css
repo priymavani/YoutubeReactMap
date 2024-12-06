@@ -24,12 +24,13 @@
     /* padding: 3%; */
     padding-top: 4%;
     padding-left: 7%;
-    font-size: .8em;
+    font-size: .99em;
     /* font-weight:500; */
 }
 .navigation:hover{
     background-color: gray;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .line{
@@ -50,6 +51,7 @@
     color: gray;
     font-weight: bold;
     font-size: 0.9em;
+    margin-top: 5%;
     padding-left: 7%;
     /* hello */
 }
