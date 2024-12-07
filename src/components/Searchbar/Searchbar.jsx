@@ -59,6 +59,7 @@ function Searchbar(){
 
                 {
                     word.map((i)=>
+                        // hover
                         <div className="word">{i.value}</div>
                     )
 
