@@ -30,16 +30,23 @@
     width: 30px;
     height: 30px;
     background-color: rgb(59, 51, 51);
+    cursor: pointer;
    
   
 
 }
+
 
 .mic{
     margin-left: 5px;
   
     background-color: transparent;
     all: unset;
+    cursor: pointer;
+}
+
+.icon{
+    cursor: pointer;
 }
 
 .search2{
@@ -70,16 +77,17 @@
     padding: 5px;
 }
 .word{
-    background-color: #383838;
+    background-color: #332f2f;
     color: white;
     border-radius: 10px;
     padding: 5px;
 }
 .word:hover{
     /* hover */
-    background-color: white;
-    color: black;
+    background-color: #3F3F3F;
+    color: white;
     border-radius: 10px;
     padding: 5px;
+    cursor: pointer;
 }
 

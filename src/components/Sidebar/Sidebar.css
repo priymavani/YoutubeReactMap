@@ -1,3 +1,11 @@
+.menu{
+    cursor: pointer;
+}
+
+.logo{
+    cursor: pointer;
+}
+
 .Side{
     background-color: #1a1a1a;
     width: 100%;
@@ -28,9 +36,10 @@
     /* font-weight:500; */
 }
 .navigation:hover{
-    background-color: gray;
-    font-weight: 500;
+    background-color: #3F3F3F;
+    /* font-weight: 500; */
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .line{
@@ -46,6 +55,8 @@
 .part3{
     padding: 5% 5% 5% 0%;
     margin-right: 5%;
+    margin-top: 1%;
+    
 }
 .sub{
     color: gray;
