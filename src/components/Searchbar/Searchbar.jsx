@@ -13,7 +13,7 @@ function Searchbar(){
     const [keyword , setKeyword] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/yt/keyword")
+        fetch("https://youtube-api-vxq5.onrender.com/yt/keyword")
         .then((response) =>  response.json())
         .then((data) => {
             setKeyword(data);

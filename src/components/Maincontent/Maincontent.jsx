@@ -25,7 +25,7 @@ function Maincontent(){
   
     useEffect(() => {
      
-      fetch("http://localhost:3000/yt")
+      fetch("https://youtube-api-vxq5.onrender.com/yt")
         .then((response) =>  response.json()
         )
         .then((data) => {
