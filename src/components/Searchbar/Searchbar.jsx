@@ -1,4 +1,5 @@
 import './Searchbar.css'
+import React , {useState , useEffect} from 'react'
 
 function Searchbar(){
 
@@ -9,21 +10,35 @@ function Searchbar(){
          {id:4 , url:"https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(6).png?raw=true"}
     ]
 
-    const word = [
-        {id:1 , value:'Cook Studio'},
-        {id:2 , value:'UX'},
-        {id:3 , value:'Case Study'},
-        {id:4 , value:'Music'},
-        {id:5 , value:'Bangla Lofi'},
-        {id:6 , value:'Tour'},
-        {id:7 , value:'Saintmartin'},
-        {id:8 , value:'Tech'},
-        {id:9 , value:'i phone 13'},
-        {id:10 , value:'User Interface Design'},
-        {id:11 , value:'computer'}
+    const [keyword , setKeyword] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3000/yt/keyword")
+        .then((response) =>  response.json())
+        .then((data) => {
+            setKeyword(data);
+        })
+        .catch((error) => {console.log(`error : ${error}`);
+    });
+    },[]);
+
+    console.log(keyword.length)
+
+    // const word = [
+    //     {id:1 , value:'Cook Studio'},
+    //     {id:2 , value:'UX'},
+    //     {id:3 , value:'Case Study'},
+    //     {id:4 , value:'Music'},
+    //     {id:5 , value:'Bangla Lofi'},
+    //     {id:6 , value:'Tour'},
+    //     {id:7 , value:'Saintmartin'},
+    //     {id:8 , value:'Tech'},
+    //     {id:9 , value:'i phone 13'},
+    //     {id:10 , value:'User Interface Design'},
+    //     {id:11 , value:'computer'}
+    // ]
 
 
-    ]
     return(
         <>
         <div className="Search">
@@ -43,13 +58,12 @@ function Searchbar(){
                 <div className="search2">
                     
                     {
-                        Search1icon.map((i)=>
+                        Search1icon.map((i)=>(
                             <div className="icon">
                         <img src={i.url} alt="" />
-                    </div>
+                    </div>)
                         )
                     }
-               
                  </div>
             </div>
             <div className="line1"></div>
@@ -57,14 +71,18 @@ function Searchbar(){
             <div className="more">
                 <div className="word1">All</div>
 
-                {
-                    word.map((i)=>
+                {/* {
+                    keyword.map((i)=>
                         // hover
                         <div className="word">{i.value}</div>
                     )
-
+                } */}
+                {
+                    keyword.map((i) =>(
+                        <div className="word" key={i.id}>{i.value}</div>)
+                    )
                 }
-                
+
 
             </div>
 
@@ -79,3 +97,4 @@ function Searchbar(){
 }
 
 export default Searchbar
+
