@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
    <div className="full">
     <Sidebar />
     <div className="Part2">
-      <Searchbar/>
+      {/* <Searchbar/> */}
       <Maincontent/>
     </div>
     </div>
